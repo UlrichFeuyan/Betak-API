@@ -141,4 +141,3 @@ bgfiaudit.sql
 build.sh
 render.yaml
 core/settings/
-requirements.txt
