@@ -195,16 +195,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.Users'
 
 
-project_home = '/home/ulrich/betak_api'
+# project_home = '/home/ulrich/betak_api'
 
-# add project directory to the sys.path
-if project_home not in sys.path:
-    sys.path.insert(0, project_home)
+# # add project directory to the sys.path
+# if project_home not in sys.path:
+#     sys.path.insert(0, project_home)
     
-# set environment varable to tel django where settings.py is
-os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
+# # set environment varable to tel django where settings.py is
+# os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
 
 
-# erve django via WSGI
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
+# # serve django via WSGI
+# from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
