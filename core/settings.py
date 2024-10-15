@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from datetime import timedelta
 import os
+import sys
 from pathlib import Path
 import dj_database_url
 
@@ -192,3 +193,18 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.Users'
+
+
+project_home = '/home/ulrich/betak_api'
+
+# add project directory to the sys.path
+if project_home not in sys.path:
+    sys.path.insert(0, project_home)
+    
+# set environment varable to tel django where settings.py is
+os.environ['DJANGO_SETTINGS_MODULE'] = 'core.settings'
+
+
+# erve django via WSGI
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
